@@ -1,5 +1,5 @@
 // Importa a classe Category.
-import { Category } from '../model/Category';
+import { Category } from '../../model/Category';
 
 // Interface que define o formato para criar uma categoria.
 interface ICreateCategoryDTO {

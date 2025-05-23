@@ -1,5 +1,5 @@
 // Importa a classe Specification.
-import { Specification } from '../model/Specification';
+import { Specification } from '../../model/Specification';
 
 // Define o formato dos dados para criar uma especificação.
 interface ICreateSpecificatiosDTO {

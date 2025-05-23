@@ -1,5 +1,5 @@
 // Importa a classe responsável por gerenciar as categorias.
-import { CategoriesRepository } from './CategoriesRepository';
+import { CategoriesRepository } from './implementation/CategoriesRepository';
 
 // Cria uma instância única do repositório.
 const categoriesRepository = new CategoriesRepository();

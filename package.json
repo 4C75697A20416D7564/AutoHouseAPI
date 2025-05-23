@@ -1,10 +1,10 @@
 {
   "name": "nodejs_typescript",
-  "version": "1.0.0",
+  "version": "alpha",
   "description": "![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge) ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=for-the-badge)",
   "main": "server.ts",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    "dev": "npx eslint . && ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
   },
   "repository": {
     "type": "git",
@@ -22,8 +22,12 @@
     "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.27.0",
     "@types/express": "^4.17.22",
+    "eslint": "^9.27.0",
+    "globals": "^16.1.0",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1"
   }
 }

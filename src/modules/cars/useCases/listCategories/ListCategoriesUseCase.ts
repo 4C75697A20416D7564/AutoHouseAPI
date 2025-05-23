@@ -1,7 +1,7 @@
 // Importa a classe Category.
 import { Category } from '../../model/Category';
 // Importa a interface do repositório de categorias.
-import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
+import { ICategoriesRepository } from '../../repositories/interface/ICategoriesRepository';
 
 // Caso de uso para listar categorias.
 class ListCategoriesUseCase {

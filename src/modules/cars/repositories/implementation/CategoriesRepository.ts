@@ -1,11 +1,27 @@
 // Importa a classe Category.
-import { Category } from '../model/Category';
+import { Category } from '../../model/Category';
 // Importa as interfaces de tipagem.
-import { ICategoriesRepository, ICreateCategoryDTO } from './ICategoriesRepository';
+import { ICategoriesRepository, ICreateCategoryDTO } from '../interface/ICategoriesRepository';
 
 // Classe responsável por gerenciar as categorias.
 class CategoriesRepository implements ICategoriesRepository {
   private categories: Category[]; // Lista privada de categorias.
+  // ESSE CODIGO E NADA MAIS NADA MENOS QUE O ARQUIVO INDEX.TS
+  //  SO QUE FEITO DIRETAMENTE NO CODIGO
+  //  FUNÇÃO CRIAR UMA INSTANCIA STATICA PARA TODA VEZ QUE FOR FEITO
+  // UM OBJETO CATEGGORIA , NAO SOBRE ESCREVA O ARRAY
+
+  // ! sinceramente cria a porra do arquivo
+  // ! PERDI MUITO TEMPO E ESFORÇO NISSO NAO COMPENSA
+
+  // * Nao compensa cria o arquivo por favor
+
+  // public static getInstance(): CategoriesRepository{
+  //  if(!CategoriesRepository.INSTANCE){
+  //    CategoriesRepository.INSTANCE = new CategoriesRepository();
+  //  }
+  //  return CategoriesRepository.INSTANCE;
+  // }
 
   constructor() {
     this.categories = []; // Inicializa a lista vazia.

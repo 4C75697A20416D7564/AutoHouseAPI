@@ -1,12 +1,12 @@
-import { response, Router } from 'express';
-import { CreateSpecificationService } from '../modules/cars/services/CreateSpecificationService';
-import { SpecificatiosRepository } from '../modules/cars/repositories/SpecificatiosRepository';
+import { Router } from 'express';
+import { CreateSpecificationUseCase } from '../modules/cars/useCases/createSpecifications/CreateSpecificationUseCase';
+import { SpecificatiosRepository } from '../modules/cars/repositories/implementation/SpecificatiosRepository';
 
 const specificationsRoutes = Router();
 const specificationsRepository = new SpecificatiosRepository();
 specificationsRoutes.post('/', (request, response) => {
   const { name, desc } = request.body;
-  const createSpecificationService = new CreateSpecificationService(specificationsRepository);
+  const createSpecificationService = new CreateSpecificationUseCase(specificationsRepository);
 
   createSpecificationService.execute({ name, desc });
 

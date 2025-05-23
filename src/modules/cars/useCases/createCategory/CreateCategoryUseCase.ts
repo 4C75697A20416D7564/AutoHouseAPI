@@ -1,5 +1,5 @@
 // Importa a interface do repositório de categorias.
-import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
+import { ICategoriesRepository } from '../../repositories/interface/ICategoriesRepository';
 
 // Define a estrutura dos dados recebidos.
 interface IRequest {

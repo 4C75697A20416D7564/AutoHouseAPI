@@ -2,10 +2,10 @@
 import {
   ICreateSpecificatiosDTO,
   ISpecificatiosRepository,
-} from '../repositories/ISpecificatiosRepository';
+} from '../../repositories/interface/ISpecificatiosRepository';
 
 // Serviço responsável por criar especificações.
-class CreateSpecificationService {
+class CreateSpecificationUseCase {
   // Recebe o repositório de especificações via construtor.
   constructor(private specificationsRepository: ISpecificatiosRepository) {}
 
@@ -25,4 +25,4 @@ class CreateSpecificationService {
 }
 
 // Exporta o serviço para uso em outras partes do sistema.
-export { CreateSpecificationService };
+export { CreateSpecificationUseCase };

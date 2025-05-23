@@ -1,7 +1,10 @@
 // Importa a classe Specification.
-import { Specification } from '../model/Specification';
+import { Specification } from '../../model/Specification';
 // Importa as interfaces de tipagem.
-import { ISpecificatiosRepository, ICreateSpecificatiosDTO } from './ISpecificatiosRepository';
+import {
+  ISpecificatiosRepository,
+  ICreateSpecificatiosDTO,
+} from '../interface/ISpecificatiosRepository';
 
 // DTO (Data Transfer Object) serve para transferir dados, isolando os modelos das regras de negócio.
 
@@ -28,7 +31,7 @@ class SpecificatiosRepository implements ISpecificatiosRepository {
     this.specifications.push(specification);
 
     // Exibe no console (para teste).
-    console.log('Criado especificações\n', specification);
+    console.log(specification);
   }
 
   // Busca uma especificação pelo nome.
