@@ -1,32 +1,43 @@
+// Importa a classe Category.
 import { Category } from '../model/Category';
+// Importa as interfaces de tipagem.
 import { ICategoriesRepository, ICreateCategoryDTO } from './ICategoriesRepository';
 
+// Classe responsável por gerenciar as categorias.
 class CategoriesRepository implements ICategoriesRepository {
-  private categories: Category[];
+  private categories: Category[]; // Lista privada de categorias.
 
   constructor() {
-    this.categories = [];
+    this.categories = []; // Inicializa a lista vazia.
   }
-  create({ name, desc }: ICreateCategoryDTO): void {
-    const category = new Category(); // cria um objeto categoria ja com o uuid, usa-se para iniciar uma categoria com uuid ja instanciado
 
+  // Cria uma nova categoria.
+  create({ name, desc }: ICreateCategoryDTO): void {
+    const category = new Category(); // Cria a categoria com ID gerado.
+
+    // Preenche a categoria com os dados recebidos.
     Object.assign(category, {
-      // função do javascript Object.assign permite prencher de forma limpa um objeto, no caso op objeto category
       name,
       desc,
-      create_at: new Date(),
+      create_at: new Date(), // Data atual.
     });
 
+    // Adiciona a categoria na lista.
     this.categories.push(category);
   }
 
+  // Retorna todas as categorias.
   list(): Category[] {
     return this.categories;
   }
+
+  // Procura uma categoria pelo nome.
   findByName(name: string): Category {
-    //LEMBRE-SE QUANDO USAR FIND() USAR OUTROS NOMES DE VARIAVEIS PARA NAO DAR BUG
+    // Importante: usar nomes diferentes na função para evitar confusão.
     const category = this.categories.find((categoria) => categoria.name === name);
     return category;
   }
 }
+
+// Torna a classe disponível para uso em outros arquivos.
 export { CategoriesRepository };

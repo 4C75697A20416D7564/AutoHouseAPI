@@ -1,14 +1,22 @@
 {
   "name": "nodejs_typescript",
-  "version": "alpha",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge) ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=for-the-badge)",
+  "main": "server.ts",
   "scripts": {
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4C75697A20416D7564/api_concecionaria.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "bugs": {
+    "url": "https://github.com/4C75697A20416D7564/api_concecionaria/issues"
+  },
+  "homepage": "https://github.com/4C75697A20416D7564/api_concecionaria#readme",
   "dependencies": {
     "express": "^5.1.0",
     "uuid": "^11.1.0"

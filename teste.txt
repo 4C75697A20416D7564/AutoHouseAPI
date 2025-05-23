@@ -1,0 +1,49 @@
+export default {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended', // Se você usa React
+    'plugin:import/recommended',
+    'plugin:jsx-a11y/recommended',
+    'airbnb-base',
+  ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'react', 'import', 'jsx-a11y'],
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  rules: {
+    'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
+    // ... outras regras personalizadas
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: './tsconfig.json',
+      },
+    },
+  },
+};
+
+
+
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import { defineConfig } from "eslint/config";
+
+
+export default defineConfig([
+  { files: ["**/*.{js,mjs,cjs,ts,mts,cts}"], plugins: { js }, extends: ["js/recommended"] },
+  { files: ["**/*.{js,mjs,cjs,ts,mts,cts}"], languageOptions: { globals: globals.node } },
+  tseslint.configs.recommended,
+]);
