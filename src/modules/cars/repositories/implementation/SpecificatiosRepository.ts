@@ -31,7 +31,6 @@ class SpecificatiosRepository implements ISpecificatiosRepository {
     this.specifications.push(specification);
 
     // Exibe no console (para teste).
-    console.log(specification);
   }
 
   // Busca uma especificação pelo nome.
