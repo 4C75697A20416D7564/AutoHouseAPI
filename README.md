@@ -1,5 +1,5 @@
 
-# 🚗 API de Gerenciamento de Categorias e Especificações
+# 🚗 AutoHouse
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
@@ -11,33 +11,33 @@
 
 ## 📦 Estrutura de Diretórios
 
-```
-📦 src
+```plaintext
+📁 src
  ┣ 📂 modules
  ┃ ┗ 📂 cars
- ┃   ┣ 📂 model
+ ┃   ┣ 📦 model
  ┃   ┃ ┣ 📄 Category.ts
  ┃   ┃ ┗ 📄 Specification.ts
- ┃   ┣ 📂 repositories
+ ┃   ┣ 📦 repositories
  ┃   ┃ ┣ 📄 CategoriesRepository.ts
  ┃   ┃ ┣ 📄 ICategoriesRepository.ts
  ┃   ┃ ┣ 📄 ISpecificatiosRepository.ts
  ┃   ┃ ┗ 📄 SpecificatiosRepository.ts
- ┃   ┣ 📂 services
+ ┃   ┣ ⚙️ services
  ┃   ┃ ┗ 📄 CreateSpecificationService.ts
- ┃   ┗ 📂 useCases
- ┃     ┣ 📂 createCategory
- ┃     ┃ ┣ 📄 CreateCategoryController.ts
- ┃     ┃ ┣ 📄 CreateCategoryUseCase.ts
- ┃     ┃ ┗ 📄 index.ts
- ┃     ┗ 📂 listCategories
- ┃       ┣ 📄 ListCategoriesController.ts
- ┃       ┣ 📄 ListCategoriesUseCase.ts
- ┃       ┗ 📄 index.ts
- ┣ 📂 router
+ ┃   ┗ 📦 useCases
+ ┃     ┣ ➕ createCategory
+ ┃     ┃ ┣ 📑 CreateCategoryController.ts
+ ┃     ┃ ┣ 📘 CreateCategoryUseCase.ts
+ ┃     ┃ ┗ 🏁 index.ts
+ ┃     ┗ 📋 listCategories
+ ┃       ┣ 📑 ListCategoriesController.ts
+ ┃       ┣ 📘 ListCategoriesUseCase.ts
+ ┃       ┗ 🏁 index.ts
+ ┣ 🛣 router
  ┃ ┣ 📄 categories.routes.ts
  ┃ ┗ 📄 specifications.routes.ts
- ┗ 📄 server.ts
+ ┗ 🖥 server.ts
 ```
 
 ---
@@ -64,12 +64,12 @@ http://localhost:3333
 
 Contribuições são super bem-vindas! Para colaborar:
 
-1. Faça um **fork** deste repositório.
+1. Faça um **fork** deste repositório.  
 2. Crie uma branch para sua feature ou correção:  
-   `git checkout -b minha-feature`
-3. Faça as alterações necessárias.
-4. Faça commit das suas alterações com mensagens claras.
-5. Envie sua branch: `git push origin minha-feature`
+   `git checkout -b minha-feature`  
+3. Faça as alterações necessárias.  
+4. Faça commit das suas alterações com mensagens claras.  
+5. Envie sua branch: `git push origin minha-feature`  
 6. Abra um Pull Request e explique suas mudanças.
 
 ---
