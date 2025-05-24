@@ -11,7 +11,7 @@ class ListCategoriesController {
   // Método que trata a requisição HTTP.
   handle(request: Request, response: Response): Response {
     const all = this.listCategoriesUseCase.execute(); // Busca todas as categorias.
-    return response.status(200).json(all); // Envia como JSON na resposta.
+    return response.status(201).json(all); // Envia como JSON na resposta.
   }
 }
 

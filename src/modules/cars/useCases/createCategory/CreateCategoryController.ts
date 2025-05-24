@@ -14,7 +14,7 @@ class CreateCategoryController {
 
     this.createCategoryUseCase.execute({ name, desc }); // Executa o caso de uso.
 
-    return response.status(200).send(); // Retorna resposta de sucesso.
+    return response.status(201).send(); // Retorna resposta de sucesso.
   }
 }
 

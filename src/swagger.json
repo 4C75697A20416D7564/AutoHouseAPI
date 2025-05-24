@@ -7,5 +7,83 @@
        "contact":{
         "email":"luizfelipehamudmac@icloud.com"
        }
+    },
+     "servers": [
+    {
+      "url": "http://localhost:3333",
+      "description": "Servidor local"
     }
+  ],
+  "paths": {
+    "/categories": {
+      "post": {
+        "summary": "Criar nova categoria",
+        "tags": ["Categorias"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "SUV"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Categoria de veículos utilitários esportivos"
+                  }
+                },
+                "required": ["name"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Categoria criada com sucesso"
+          },
+          "500": {
+            "description": "Categoria já Existente"
+          }
+        }
+      }
+    },
+    "/specifications": {
+      "post": {
+        "summary": "Criar nova especificação",
+        "tags": ["Especificações"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Motor Turbo"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Veículo equipado com motor turbo"
+                  }
+                },
+                "required": ["name"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Especificação criada com sucesso"
+          },
+          "500": {
+            "description": "Especificação já Existente"
+          }
+        }
+      }
+    }
+  }
 }
