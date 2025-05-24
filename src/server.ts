@@ -1,6 +1,6 @@
 // Importa o framework Express.
-import express from 'express';
-import { router } from './router';
+import express from "express";
+import { router } from "./router";
 
 // Cria a aplicação Express.
 const app = express();
@@ -11,4 +11,4 @@ app.use(express.json());
 app.use(router);
 
 // Inicia o servidor na porta 3333 e mostra uma mensagem no console.
-app.listen(3333, () => console.log('Server is Running\nPORT -> 3333'));
+app.listen(3333, () => console.log("Server is Running\nPORT -> 3333"));

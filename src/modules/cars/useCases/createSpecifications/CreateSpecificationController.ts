@@ -1,7 +1,7 @@
 // Importa os tipos Request e Response do Express.
-import { Response, Request } from 'express';
+import { Response, Request } from "express";
 // Importa o caso de uso para criar categoria.
-import { CreateSpecificationUseCase } from './CreateSpecificationUseCase';
+import { CreateSpecificationUseCase } from "./CreateSpecificationUseCase";
 
 // Controlador que lida com a requisição de criar categoria.
 class CreateSpecificationController {
