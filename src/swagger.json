@@ -1,0 +1,11 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+       "title": "VeroPraxis Documentation",
+       "description":"This is an API Rent",
+       "version":"alpha",
+       "contact":{
+        "email":"luizfelipehamudmac@icloud.com"
+       }
+    }
+}
